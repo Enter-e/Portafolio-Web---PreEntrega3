@@ -1,0 +1,12 @@
+/* con parametros */
+
+@mixin medidas($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+/* sin parametros */
+
+@mixin flex {
+    
+}

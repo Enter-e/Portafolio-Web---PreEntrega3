@@ -1,4 +1,7 @@
-@import "utilidades/contacto", "utilidades/habilidades", "utilidades/proyectos", "utilidades/sobremi", "utilidades/variables";
+@import "utilidades/contacto", "utilidades/habilidades", "utilidades/proyectos", "utilidades/sobremi";
+@import "utilidades/variables";
+@import "utilidades/mixin";
+@import "utilidades/extend";
 
 *{
     margin: 0;
@@ -58,7 +61,7 @@ header {
         a::after{
             content:"" ;
             position: absolute;
-            background-color: #FB3640;
+            background-color: $color-principal;
             height: 3px;
             width: 0%;
             left: 0;
@@ -69,8 +72,137 @@ header {
             width: 100%;
         }
     }
+    .logo {
+        height: auto;
+        width: 100px;
+    }
 }
 
 
 /* Body */
 
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    min-height: 60vh;
+    margin: 190px auto;
+    height: 3px;
+    width: 100%;
+    img {
+        height: auto;
+        width:  400px;
+        border-radius: 8%;
+        float: right;
+        margin-left: 80px;
+        margin-top: 20px;
+    }
+    span{
+        color: $color-principal;
+    }
+}
+
+.text-hero {
+    width: 770px;
+    height: auto;
+    a {
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        width: 180px;
+        font-family: "Teko", sans-serif;
+        font-weight: 500;
+        font-size: 20px;
+        color: white;
+        border-radius: 10px;
+        border-style: solid;
+        border-color: $color-principal;
+        padding: 20px 30px;
+        margin-top: 50px;
+    }
+    a:hover{
+        background-color: $color-principal;
+    }
+}
+
+h2 {
+    font-family: "Teko", sans-serif;
+    font-size: 10rem;
+    font-weight: 700;
+    color:  white;
+    margin-bottom: -10px;
+}
+
+h3 {
+    font-family: "Teko", sans-serif;
+    font-size: 6rem;
+    font-weight: 500;
+    color: $color-principal;
+    margin-bottom: -10px;
+}
+
+h4 {
+    font-family: "Teko", sans-serif;
+    font-size: 3rem;
+    font-weight: 400;
+    color: $color-principal;
+    margin-bottom: -10px;
+}
+
+p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+    font-weight: 300;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.logos {
+    font-size: 50px;
+    color:$color-principal;
+}
+
+.enviar {
+    display: block;
+    text-align: center;
+    width: 180px;
+    font-family: "Teko", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: white;
+    background-color: transparent;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #FB3640;
+    padding: 20px 30px;
+    margin-top: 50px;
+    :hover {
+        background-color: #FB3640;
+    }
+}
+
+
+/* Footer */
+
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 180px;
+    background-image: linear-gradient(to top, #e2ebf0 100%,#cfd9df 50%);
+    margin-top: auto;
+    p {
+        color: #001011;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 200;
+        font-size: 20px;  
+    }
+    a{
+        text-decoration: none;
+        color: #001011;
+        font-size: 25px;
+    }
+    i {
+    margin-right: 15px;
+    }    
+}
